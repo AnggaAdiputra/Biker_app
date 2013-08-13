@@ -1,0 +1,16 @@
+<h1> List All Location<h1>
+
+	<ul>
+		<% @locations.each do |location| %>
+		<li>
+			<%= link_to location.name, location_path(location) %>
+
+			<%= link_to 'Edit', edit_location_path(location) %> |
+			<%= link_to 'Delete', location_path(location), method: :Delete %>
+
+		</li>
+		<% end %>
+	</ul>
+
+	<br/>
+	<%= link_to 'New_Location', new_location_path %>

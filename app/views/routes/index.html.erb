@@ -1,0 +1,16 @@
+<h1> List All Route<h1>
+
+	<ul>
+		<% @routes.each do |route| %>
+		<li>
+			<%= link_to route.name, route_path(route) %>
+
+			<%= link_to 'Edit', edit_route_path(route) %> |
+			<%= link_to 'Delete', route_path(route), method: :Delete %>
+
+		</li>
+		<% end %>
+	</ul>
+
+	<br/>
+	<%= link_to 'New_Route', new_route_path %>

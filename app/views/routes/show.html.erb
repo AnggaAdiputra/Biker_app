@@ -1,0 +1,8 @@
+<h1> <%= @route.name %> </h1>
+
+<p>
+	Start Location  : <%= @route.start_location.name %> <br>
+	End Location    : <%= @route.end_location.name %><br>
+</p>
+
+<%= link_to 'Edit', edit_route_path(@route) %>

@@ -1,0 +1,14 @@
+<h1> List All History<h1>
+
+	<ul>
+		<% @history.each do |history| %>
+		<li>
+			<%= link_to history.name, history_path(history) %>
+
+			<%= link_to 'Edit', edit_history_path(history) %> |
+			<%= link_to 'Delete', history_path(history), method: :Delete %>
+
+		</li>
+		<% end %>
+	</ul>
+

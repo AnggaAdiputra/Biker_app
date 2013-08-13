@@ -11,13 +11,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130802032630) do
+ActiveRecord::Schema.define(:version => 20130812073954) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "histories", :force => true do |t|
+    t.integer  "location_id"
+    t.integer  "user_id"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "locations", :force => true do |t|
     t.string   "name"
-    t.string   "longitude"
-    t.string   "latitude"
-    t.string   "type"
+    t.decimal  "longitude",     :precision => 30, :scale => 20
+    t.decimal  "latitude",      :precision => 30, :scale => 20
+    t.string   "location_type"
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
+    t.integer  "category_id"
+    t.integer  "regional_id"
+  end
+
+  create_table "locations_users", :force => true do |t|
+    t.integer "location_id"
+    t.integer "user_id"
+  end
+
+  create_table "regionals", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -35,9 +62,6 @@ ActiveRecord::Schema.define(:version => 20130802032630) do
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "name",                                   :null => false
-    t.string   "longitude",                              :null => false
-    t.string   "latitude",                               :null => false
-    t.string   "type",                                   :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -51,6 +75,10 @@ ActiveRecord::Schema.define(:version => 20130802032630) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "home_address"
+    t.string   "full_name"
+    t.string   "address"
+    t.string   "gender"
+    t.string   "contact"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

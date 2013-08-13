@@ -1,0 +1,10 @@
+<%= form_for @route do |f| %>
+
+<%= f.text_field :name %>
+
+<%= f.collection_select :start_location_id, StartLocation.all, :id, :name %>
+<%= f.collection_select :end_location_id, EndLocation.all, :id, :name %>
+
+<%= f.submit %>
+
+<% end %>

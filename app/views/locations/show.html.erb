@@ -1,0 +1,10 @@
+<h1> <%= @location.name %> </h1>
+
+<p>
+	Latitude  : <%= @location.latitude %> <br>
+	Longitude : <%= @location.longitude %><br>
+	Category  : <%= @location.category.name %><br>
+	Regional  : <%= @location.regional.name %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %>
