@@ -1,16 +1,16 @@
-<h1 class='text-center'><em>Biker's Trip</em></h1>
+<h1 class='text-center' style='border:2px solid; background-color:red;'><em>Biker's Trip</em></h1>
 <div class='row-fluid'>
 
 	<div class='span3' style='margin-top:20px;'>
 
-	<%= link_to 'Friends', new_user_session_path, class:"btn btn-large btn-block btn-success" %>
+	<%= link_to 'Friends', main_index_path, class:"btn btn-large btn-block btn-success" %>
 
 		</div>
 		<div class='span3' style='margin-top:20px;'>
 			<%= link_to 'Lets Ride', new_route_path, class:"btn btn-large btn-block btn-info" %>
 		</div>
 	 <div class='span3' style='margin-top:20px;'>
-	 	<%= link_to 'User', edit_user_registration_path, class:"btn btn-large btn-block btn-info" %>
+	 	<%= link_to 'User', user_path(1), class:"btn btn-large btn-block btn-info" %>
 	 </div>
 	<div class='span3' style='margin-top:20px;'>
 		<%= link_to 'Log out', destroy_user_session_path, class:"btn btn-large btn-block btn-info", method: :delete %>
@@ -34,10 +34,33 @@
 <div class='row'>
 	<div class='span12'>
 		<center>
-			<%= link_to 'My Settings', new_route_path, class:"btn btn-large  btn-info" %>
+			<%= link_to 'My Settings', settings_path, class:"btn btn-large  btn-info" %>
 
 		</center>
 	</div>
 </div>
 
+<div class='row'>
+<div class='span6' style='margin-top:80px;'>
+	<center>
+		<%= link_to 'Friends', new_route_path, class:"btn btn-large btn-info" %>
+		
+		</center>
+	</div>
 
+
+<div class='span6' style='margin-top:80px;'>
+	<center>
+		<%= link_to 'Photos', new_route_path, class:"btn btn-large btn-info" %>
+		</center>
+	</div>
+	</div>
+
+	<div class='row'>
+	<div class='span12'>
+		<center>
+			<%= link_to 'History', new_route_path, class:"btn btn-large  btn-info" %>
+
+		</center>
+	</div>
+</div>

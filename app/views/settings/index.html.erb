@@ -1,9 +1,9 @@
-<h1 class='text-center' style='border:2px solid; background-color:red;'><em>Biker's Trip</em></h1>
+<h1 class='text-center' style='border:2px solid; background-color:red;'><em>Biker's Trip<br>Settings</em></h1>
 <div class='row-fluid'>
 
 	<div class='span3' style='margin-top:20px;'>
 
-<%= link_to 'Friends', main_index_path, class:"btn btn-large btn-block btn-success" %>
+<%= link_to 'Friends', new_user_session_path, class:"btn btn-large btn-block btn-success" %>
 
 	</div>
 	<div class='span3' style='margin-top:20px;'>
@@ -15,11 +15,16 @@
 <div class='span3' style='margin-top:20px;'>
 	<%= link_to 'Log out', destroy_user_session_path, class:"btn btn-large btn-block btn-info", method: :delete %>
 </div>
-<div class='span3' style='margin-top:460px; margin-left:850px;'>
-		<%= link_to 'Explore Route', new_route_path, class:"btn btn-large btn-block btn-info" %>
+</div>
+
+<div class='row'>
+<div class='span12' style='margin-top:100px;'>
+		<%= link_to 'About', new_route_path, class:"btn btn-large btn-info" %>
 	</div>
 </div>
 
-
-<h6 style='margin-left:900px;'><strong>TAP ABOVE TO EXPLORE !</strong></h6>
-<h6><em>Biker's Trip</em></h6>
+<div class='row'>
+<div class='span12' style='margin-top:50px;'>
+		<%= link_to 'Find Friends', new_route_path, class:"btn btn-large btn-info" %>
+	</div>
+</div>

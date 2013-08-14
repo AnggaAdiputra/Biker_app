@@ -15,5 +15,5 @@ Biker::Application.routes.draw do
   resources :histories
   resources :main
   resources :users
-  
+  resources :settings
 end
