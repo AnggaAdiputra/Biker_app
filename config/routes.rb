@@ -16,4 +16,7 @@ Biker::Application.routes.draw do
   resources :main
   resources :users
   resources :settings
+  resources :photos
+  resources :friends
+  resources :about
 end

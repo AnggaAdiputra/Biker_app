@@ -13,4 +13,6 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, :username
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a+z]{2,})\z/i
   validates_format_of :username, with: /^[A-Za-z0-9]+$/i
+
+  include Amistad::FriendModel
 end
