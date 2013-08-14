@@ -1,0 +1,25 @@
+<h1 class='text-center'><em>Biker's Trip</em></h1>
+<div class='row-fluid'>
+
+	<div class='span3' style='margin-top:20px;'>
+
+<%= link_to 'Friends', new_user_session_path, class:"btn btn-large btn-block btn-success" %>
+
+	</div>
+	<div class='span3' style='margin-top:20px;'>
+		<%= link_to 'Lets Ride', new_route_path, class:"btn btn-large btn-block btn-info" %>
+	</div>
+ <div class='span3' style='margin-top:20px;'>
+ 	<%= link_to 'User', edit_user_registration_path, class:"btn btn-large btn-block btn-info" %>
+ </div>
+<div class='span3' style='margin-top:20px;'>
+	<%= link_to 'Log out', destroy_user_session_path, class:"btn btn-large btn-block btn-info", method: :delete %>
+</div>
+<div class='span3' style='margin-top:460px; margin-left:850px;'>
+		<%= link_to 'Explore Route', new_route_path, class:"btn btn-large btn-block btn-info" %>
+	</div>
+</div>
+
+
+<h6 style='margin-left:900px;'><strong>TAP ABOVE TO EXPLORE !</strong></h6>
+<h6><em>Biker's Trip</em></h6>

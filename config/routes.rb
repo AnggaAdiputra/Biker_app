@@ -13,5 +13,7 @@ Biker::Application.routes.draw do
   resources :locations
   resources :routes
   resources :histories
+  resources :main
+  resources :users
   
 end
