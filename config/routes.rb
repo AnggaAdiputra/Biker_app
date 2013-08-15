@@ -19,4 +19,5 @@ Biker::Application.routes.draw do
   resources :photos
   resources :friends
   resources :about
+  resources :find
 end

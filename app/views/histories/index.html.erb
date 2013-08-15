@@ -1,9 +1,36 @@
-<h1> List All History<h1>
+<h1>History Info<h1>
+
+<div class='row-fluid'>
+	<div class='span12' style='margin-top:20px;'>
+		<%= image_tag '/assets/profile.jpg', class: 'img-polaroid', style: 'width:100px; float: left; margin-right: 20px;' %>
+		<p style='color:White; font-size:10px'>
+			Name    : Robin Haldane <br>
+			Address : Medford, Oregon United States <br>
+			Gender  : Male 
+		</p>
+	</div>
+
+	<table class="table" style="margin-top:20px; color:White; font-size:12px;">
+ <tr>
+	<td>First Check-in</td>
+	<td>Last Check-in</td>
+	<td>Total Check-in</td>
+	<td>Member Since</td>
+ </tr>
+ <tr>
+	<td>Jln. Swadaya 1, Bintaro Jaya</td>
+	<td>Bina Nusantara, Campus anggrek</td>
+	<td>20 Times</td>
+	<td>10 March 2010</td>
+ </tr>
+</table>
+
+
 
 	<ul>
-		<% @history.each do |history| %>
+		<% @histories.each do |history| %>
 		<li>
-			<%= link_to history.name, history_path(history) %>
+			<%= link_to histories.name, histories_path(histories) %>
 
 			<%= link_to 'Edit', edit_history_path(history) %> |
 			<%= link_to 'Delete', history_path(history), method: :Delete %>
