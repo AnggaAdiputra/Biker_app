@@ -1,10 +1,10 @@
-<h1 class="text-center"><em>Biker's Trip</em></h1>
-<h2>Sign Up</h2>
+<h1 class="text-center" style='color:White; background:Red;' ><em>Biker's Trip</em></h1>
+<h2 style='color:White'>Sign Up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div style= 'color:White;'><%= f.label :email %><br />
+  
+	 <div style= 'color:White;'><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
   <div style= 'color:White;'><%= f.label :password %><br />
@@ -15,5 +15,6 @@
 
   <div><%= f.submit "SIGN UP" %></div>
 <% end %>
+
 
 <%= render "devise/shared/links" %>

@@ -10,7 +10,7 @@
 			<%= link_to 'Lets Ride', new_route_path, class:"btn btn-large btn-block btn-success" %>
 		</div>
 	 <div class='span3' style='margin-top:20px;'>
-	 	<%= link_to 'User', '#', class:"btn btn-large btn-block btn-primary disabled" %>
+	 	<%= link_to 'User', user_path(1), class:"btn btn-large btn-block btn-primary disabled" %>
 	 </div>
 	<div class='span3' style='margin-top:20px;'>
 		<%= link_to 'Log out', destroy_user_session_path, class:"btn btn-large btn-block btn-danger", method: :delete %>
@@ -64,3 +64,5 @@
 		</center>
 	</div>
 </div>
+
+<h6 style='color:White; margin-top:100px'><em>Biker's Trip</em></h6>

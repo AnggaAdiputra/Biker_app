@@ -1,10 +1,48 @@
 <%= form_for @route do |f| %>
+	<table>
+		<tr>
+			<td style='color:White'>
+				Route Name
+			</td>
 
-<%= f.text_field :name %>
+			<td>
+				:
+			</td>
 
-<%= f.collection_select :start_location_id, StartLocation.all, :id, :name %>
-<%= f.collection_select :end_location_id, EndLocation.all, :id, :name %>
+			<td>
+				<%= f.text_field :name %>
+			</td>
+		</tr>
 
-<%= f.submit %>
+		<tr>
+			<td style='color:White'>
+				Route Name
+			</td>
+
+			<td>
+				:
+			</td>
+
+			<td>
+				<%= f.collection_select :start_location_id, StartLocation.all, :id, :name %>
+			</td>
+		</tr>
+
+		<tr>
+			<td style='color:White' >
+				Route Name
+			</td>
+
+			<td>
+				:
+			</td>
+
+			<td>
+				<%= f.collection_select :end_location_id, EndLocation.all, :id, :name %>
+			</td>
+		</tr>
+	</table>
+
+<%= f.submit 'Let\'s Ride', class: 'btn btn-success' %>
 
 <% end %>
