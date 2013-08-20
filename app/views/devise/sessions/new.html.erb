@@ -1,15 +1,16 @@
-<h1 class="text-center" style='color:White; background:Red;'><em>Biker's Trip</em></h1>
-<h2 style='color:White;'>Log in</h2>
+<h2 class='white'>Log in</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div style= 'color:White;'><%= f.label :email %><br />
+<div class='white'>
+  <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
-  <div style= 'color:White;'><%= f.label :password %><br />
+  <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
 
   <% if devise_mapping.rememberable? -%>
-    <div style= 'color:White;'><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+ </div>
   <% end -%>
 
   <div><%= f.submit "LOG IN" %></div>

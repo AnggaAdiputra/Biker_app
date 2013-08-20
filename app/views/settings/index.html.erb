@@ -1,32 +1,22 @@
-<h1 class='text-center' style='border:2px solid; background-color:red; color:White;'><em>Biker's Trip<br>Settings</em></h1>
-<div class='row-fluid'>
-
-	<div class='span3' style='margin-top:20px;'>
-
-<%= link_to 'News Feed', main_index_path, class:"btn btn-large btn-block btn-info" %>
-
-	</div>
-	<div class='span3' style='margin-top:20px;'>
-			<%= link_to 'Lets Ride', new_route_path, class:"btn btn-large btn-block btn-success" %>
-		</div>
-	 <div class='span3' style='margin-top:20px;'>
-	 	<%= link_to 'User', user_path(1), class:"btn btn-large btn-block btn-primary" %>
-	 </div>
-	<div class='span3' style='margin-top:20px;'>
-		<%= link_to 'Log out', destroy_user_session_path, class:"btn btn-large btn-block btn-danger", method: :delete %>
-	</div>
-</div>
+<h1 class='white'><em>Settings</em></h1>
+<%= render 'layouts/menubar' %>
 
 <div class='row'>
-<div class='span12' style='margin-top:100px;'>
+<div class='span12 about' >
 		<%= link_to 'About', about_index_path, class:"btn btn-large btn-info" %>
 	</div>
 </div>
 
 <div class='row'>
-<div class='span12' style='margin-top:50px;'>
+<div class='span12 find-friend'>
 		<%= link_to 'Find Friends', find_index_path, class:"btn btn-large btn-info" %>
 	</div>
 </div>
 
-<h6 style='color:White; margin-top:300px;'><em>Biker's Trip</em></h6>
+<div class='row'>
+<div class='span12 edit-profile'>
+		<%= link_to 'Edit Profile', edit_profile_path(current_user), class:"btn btn-large btn-info" %>
+	</div>
+</div>
+
+<h6 class='logosettings'><em>Biker's Trip</em></h6>

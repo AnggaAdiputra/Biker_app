@@ -1,22 +1,29 @@
 <div class='row-fluid'>
 	<div class='span-8'>
-		<h1 class="text-center" style='border:2px solid; background-color:red; color:White;'>
-			<em>Biker's Trip</em>
-		</hi>
 </div>
 
-		<p class="text-center" style='margin-top:120px; color:White;'>
+		<p class="text-center white account">
 			ALREADY HAVE AN ACCOUNT?
 		</p>
 
-		<p class="text-center" style='margin-bottom:150px;'>
-			<%= link_to 'LOG IN', new_user_session_path, class:"btn btn-large btn-success" %>
+		<% if user_signed_in? %>
+
+		<p class="text-center log">
+			<%= link_to 'LOG OUT', destroy_user_session_path, class:"btn btn-large btn-success", method: :delete %>
 		</p>
 
-		<p class="text-center" style='margin-top:120px; color:White;'>
+		<% else %>
+			<p class="text-center log">
+				<%= link_to 'LOG IN', new_user_session_path, class:"btn btn-large btn-success" %>
+			</p>
+		<% end %>
+
+		<p class="text-center join">
 			JOIN BIKER'S TRIP TODAY
 		</p>
-		<p class="text-center" style="" >
+		<p class="text-center">
 			<%= link_to 'SIGN UP', new_user_registration_path, class:"btn btn-large btn-info" %>
 		</p>
 </div>
+
+<h6 class='white logohome'><em>Biker's Trip</em></h6>

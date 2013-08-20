@@ -1,3 +1,57 @@
+h1.bikers-trip {
+	background-color:red; color:White;
+}
+
 h1.text-center{
 	text-align:center;
+}
+
+#error_explanation {
+	h2 {
+		color: #fff;
+	}
+	li {
+		color:#fff;
+	}
+}
+
+.white {
+	color: white;
+}
+
+.transparent {
+	background-color: white;
+	opacity: 0.5;
+	padding-bottom: 15px;
+}
+
+.back-my-settings {
+	margin-top:300px; float: right; margin-right: 20px;
+}
+
+body {
+	background-image:image-url('/assets/background3.jpg');
+}
+.nav-search-form {
+	input[type='text'] {
+		float: left;
+	}
+	button {
+		float: left;
+	}
+	margin-top: 8px;
+}
+
+.clearer {
+	clear:both;
+}
+
+.menubar-container {
+	overflow: hidden;
+	border:1px solid white;
+	border-radius:20px; 
+	background-color:Slategray;
+	padding:0px 20px;
+
+
 }

@@ -2,4 +2,14 @@
  *= require bootstrap
  *= require bootstrap-responsive
  *= require style
+ *= require main
+ *= require routes
+ *= require settings
+ *= require users
+ *= require photos
+ *= require home
+ *= require about
+ *= require find
+ *= require friends
+ *= require histories
  */

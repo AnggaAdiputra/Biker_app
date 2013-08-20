@@ -1,24 +1,9 @@
-<h1 class='text-center' style='border:2px solid; background-color:red; color:White;'><em>Biker's Trip</em></h1>
 <div class='row-fluid'>
 
-	<div class='span3' style='margin-top:20px;'>
+<%= render 'layouts/menubar' %>
 
-<%= link_to 'News Feed', main_index_path, class:"btn btn-large btn-block btn-info" %>
-
-	</div>
-	<div class='span3' style='margin-top:20px;'>
-			<%= link_to 'Lets Ride', new_route_path, class:"btn btn-large btn-block btn-success" %>
-		</div>
-	 <div class='span3' style='margin-top:20px;'>
-	 	<%= link_to 'User', user_path(1), class:"btn btn-large btn-block btn-primary" %>
-	 </div>
-	<div class='span3' style='margin-top:20px;'>
-		<%= link_to 'Log out', destroy_user_session_path, class:"btn btn-large btn-block btn-danger", method: :delete %>
-	</div>
-</div>
-
-<h2 style="margin-top:100px; color:White;">Friend List</h2>
-<table class="table" style="margin-top:20px; color:White;">
+<h2 class='title'>Friend List</h2>
+<table class="table white menubar">
  <tr>
 	<td>username</td>
 	<td>Total check-in</td>

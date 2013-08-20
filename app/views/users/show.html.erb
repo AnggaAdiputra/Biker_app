@@ -1,29 +1,17 @@
-<h1 class='text-center' style='border:2px solid; background-color:red; color:White;'><em>Biker's Trip</em></h1>
-<div class='row-fluid'>
-
-	<div class='span3' style='margin-top:20px;'>
-
-	<%= link_to 'News Feed', main_index_path, class:"btn btn-large btn-block btn-info" %>
-
-		</div>
-		<div class='span3' style='margin-top:20px;'>
-			<%= link_to 'Lets Ride', new_route_path, class:"btn btn-large btn-block btn-success" %>
-		</div>
-	 <div class='span3' style='margin-top:20px;'>
-	 	<%= link_to 'User', user_path(1), class:"btn btn-large btn-block btn-primary disabled" %>
-	 </div>
-	<div class='span3' style='margin-top:20px;'>
-		<%= link_to 'Log out', destroy_user_session_path, class:"btn btn-large btn-block btn-danger", method: :delete %>
+<div class='row'>
+	<div class='span12'>
+		<%= render 'layouts/menubar' %>
 	</div>
 </div>
 
-<div class='row-fluid'>
-	<div class='span12' style='margin-top:20px;'>
-		<%= image_tag '/assets/profile.jpg', class: 'img-polaroid', style: 'width:200px; float: left; margin-right: 20px;' %>
-		<p style='color:White;'>
-			Name    : Robin Haldane <br>
-			Address : Medford, Oregon United States <br>
-			Gender  : Male 
+<div>
+	<div class='span12 menubar' style='marign-right:50px;'>
+		<%= image_tag @user.image_url, class: 'img-polaroid image' %>
+		<p class='white'>
+			Name    : <%= @user.name %> <br>
+			Email   : <%= @user.email %> <br>
+			Gender  : <%= @user.gender %> <br>
+			Location: <%= @user.location %> <br> 
 		</p>
 
 	</div>
@@ -41,7 +29,7 @@
 </div>
 
 <div class='row'>
-<div class='span6' style='margin-top:80px;'>
+<div class='span6 menubar2'>
 	<center>
 		<%= link_to 'Friends', friends_path, class:"btn btn-large btn-info" %>
 		
@@ -49,7 +37,7 @@
 	</div>
 
 
-<div class='span6' style='margin-top:80px;'>
+<div class='span6 menubar2'>
 	<center>
 		<%= link_to 'Photos', photos_path, class:"btn btn-large btn-primary" %>
 		</center>
@@ -65,4 +53,4 @@
 	</div>
 </div>
 
-<h6 style='color:White; margin-top:100px'><em>Biker's Trip</em></h6>
+<h6 class='white logousers'><em>Biker's Trip</em></h6>

@@ -1,16 +1,17 @@
-<h1>History Info<h1>
+<h1 class='white'>History Info<h1>
 
 <div class='row-fluid'>
-	<div class='span12' style='margin-top:20px;'>
-		<%= image_tag '/assets/profile.jpg', class: 'img-polaroid', style: 'width:100px; float: left; margin-right: 20px;' %>
-		<p style='color:White; font-size:10px'>
-			Name    : Robin Haldane <br>
-			Address : Medford, Oregon United States <br>
-			Gender  : Male 
+	<div class='span12 top'>
+		<%= image_tag @user.image_url, class: 'img-polaroid imgset' %>
+		<p class='white font'>
+			Name    : <%= @user.name %> <br>
+			Email   : <%= @user.email %> <br>
+			Gender  : <%= @user.gender %> <br>
+			Location: <%= @user.location %> <br> 
 		</p>
 	</div>
 
-	<table class="table" style="margin-top:20px; color:White; font-size:12px;">
+	<table class="table tableset">
  <tr>
 	<td>First Check-in</td>
 	<td>Last Check-in</td>
@@ -28,7 +29,7 @@
 
 
 	<ul>
-		<% @histories.each do |history| %>
+		<% @histories.each do |history| %> class='white'
 		<li>
 			<%= link_to histories.name, histories_path(histories) %>
 
@@ -38,4 +39,13 @@
 		</li>
 		<% end %>
 	</ul>
+
+			<div class='row '>
+			<div class='span12'>
+				<div class='back-my-settings'>
+				
+					<%= link_to '<< Back To User', user_path(current_user), class:"btn btn-large btn" %>
+			</div>
+		</div>
+	</div>
 

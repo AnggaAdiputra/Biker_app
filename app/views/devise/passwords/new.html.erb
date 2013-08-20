@@ -1,9 +1,11 @@
-<h2 style='color:White;'>Forgot your password?</h2>
+
+
+<h2 class='white'>Forgot your password?</h2>
 
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div style='color:White;'><%= f.label 'email', :email %><br />
+  <div class='white'><%= f.label 'email', :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
   <div><%= f.submit "Send me reset password instructions" %></div>
