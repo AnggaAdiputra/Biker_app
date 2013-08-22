@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130816065821) do
+ActiveRecord::Schema.define(:version => 20130821044026) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(:version => 20130816065821) do
   add_index "friendships", ["friendable_id", "friend_id"], :name => "index_friendships_on_friendable_id_and_friend_id", :unique => true
 
   create_table "histories", :force => true do |t|
-    t.integer  "location_id"
     t.integer  "user_id"
     t.string   "image"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "route_id"
   end
 
   create_table "locations", :force => true do |t|
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20130816065821) do
     t.integer  "user_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "image"
   end
 
   create_table "users", :force => true do |t|
@@ -90,6 +91,10 @@ ActiveRecord::Schema.define(:version => 20130816065821) do
     t.string   "contact"
     t.string   "image"
     t.string   "location"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

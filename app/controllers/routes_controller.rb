@@ -1,4 +1,5 @@
 class RoutesController < ApplicationController
+before_filter :authenticate_user!
 
 	def index
 		@routes = Route.all
@@ -13,7 +14,9 @@ class RoutesController < ApplicationController
 	end
 
 	def create
-		@route = Route.new(params[:route])
+		@user  = current_user
+		@route = current_user.routes.new(params[:route])
+		@route.history = History.new(user: current_user)
 		if @route.save
 			redirect_to route_path(@route)
 		else

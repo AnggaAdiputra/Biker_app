@@ -4,15 +4,39 @@
 	</div>
 </div>
 
-<div>
 	<div class='span12 menubar'>
 		<%= image_tag @user.image_url, class: 'img-polaroid image' %>
-		<p class='white'>
-			Name    : <%= @user.name %> <br>
-			Email   : <%= @user.email %> <br>
-			Gender  : <%= @user.gender %> <br>
-			Location: <%= @user.location %> <br> 
-		</p>
+		<table class='white'>
+			<tr>
+				<td>Name</td>
+				<td> : </td>
+				<td><%= @user.name %></td>
+			</tr>
+
+			<tr>
+			<td>Email</td>
+			<td> : </td>
+			<td><%= @user.email %></td>
+			</tr>
+
+			<tr>
+			<td>Gender</td>
+			<td> : </td>
+			<td><%= @user.gender %></td>
+			</tr>  
+
+			<tr>
+			<td>Location</td>
+			<td> : </td>
+			<td><%= @user.location %></td>
+			</tr> 
+
+			<tr>
+			<td>Member Since</td>
+			<td> : </td>
+			<td><%= @user.created_at.strftime('%d %B %Y') %></td>
+			</tr>   
+		</table>
 
 	</div>
 
@@ -39,7 +63,7 @@
 
 <div class='span6 menubar2'>
 	<center>
-		<%= link_to 'Photos', photos_path, class:"btn btn-large btn-primary" %>
+		<%= link_to 'Photos', user_photos_path(@user), class:"btn btn-large btn-primary" %>
 		</center>
 	</div>
 	</div>

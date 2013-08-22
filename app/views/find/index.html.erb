@@ -1,12 +1,32 @@
 <h1 class='white'>Search Friend By Name or ID :</h1>
-
-<form class="form-search form">
-  <input type="text" class="input-medium search-query">
-  <button type="submit" class="btn btn-success">Find Now!</button>
-</form>
+<%= form_tag find_index_path, class: 'form-search form', method: :get do %>
+<%= text_field_tag :name, params[:name].to_s, class: 'input-medium search-query' %>
+<%= submit_tag 'Find Now!', class: 'btn btn-success' %>
+<% end %>
 
 <div class='row'>
 	<div class='span12'>
+
+		<% if @users.present? %>
+		 <ul>
+		 	<% @users.each do |user| %>
+		 	<li>
+		 		<%= link_to user.name, user_path(user) %> |
+		 		 <% if !current_user.friend_with?(user) && !current_user.pending_invited.include?(user) %>
+		 		  <%= link_to 'Add Friend', friends_path(id: user.id, redirect_to: find_index_path(name: params[:name].to_s)),
+		 		  		method: :post, class: 'btn btn-primary' %>
+		 		  <% end %>
+
+				<% if !current_user.friend_with?(user) && current_user.pending_invited.include?(user) %>
+		 		  <%= link_to 'Remove Pending Invited', friend_path(id: user.id, redirect_to: find_index_path(name: params[:name].to_s)),
+		 		  		method: :delete, class: 'btn btn-primary' %>
+		 		  <% end %>
+		 		  </li>
+		 		  <% end %>		 		  
+		 		</ul>
+		 	<% end %>
+
+
 		<div class='back-my-settings'>
 			<%= link_to '<< Back to My Settings', settings_path, class:"btn btn-large btn" %>
 		</div>

@@ -1,0 +1,19 @@
+<h2 class='title'>Friend List</h2>
+	<table class="table white menubar">
+		<% current_user.pending_invited_by.each do |friend| %>
+	 <tr>
+		<td><%= link_to friend.name, user_path(friend) %></td>
+		<td><%= link_to 'Approve', friend_path(friend), method: :put, class: 'btn'%></td>
+		<td><%= link_to 'Cancel', friend_path(friend), method: :delete, class: 'btn'%></td>
+	 </tr>
+	<% end %>
+</table>
+
+<div class='row '>
+			<div class='span12'>
+				<div class='back-to-user'>
+				
+					<%= link_to '<< Back To User', user_path(current_user), class:"btn btn-large btn" %>
+			</div>
+		</div>
+	</div>

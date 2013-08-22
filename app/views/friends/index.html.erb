@@ -4,28 +4,20 @@
 
 <h2 class='title'>Friend List</h2>
 <table class="table white menubar">
- <tr>
-	<td>username</td>
-	<td>Total check-in</td>
- </tr>
- <tr>
-	<td>angga</td>
-	<td>20 Times</td>
- </tr>
- <tr>
-	<td>Adli</td>
-	<td>40 Times</td>
- </tr>
- <tr>
-	<td>Agus</td>
-	<td>11 Times</td>
- </tr>
- <tr>
-	<td>Aulia</td>
-	<td>25 Times</td>
- </tr>
- <tr>
-	<td>Rini</td>
-	<td>10 Times</td>
- </tr>
+
+<tr>
+	<td>Username</td>
+	<td>Location</td>
+</tr>
+
+
+	<% @friends.each do |friend| %>
+	<tr>
+		<td><%= link_to friend.name, user_path(friend) %></td>
+		<td><%= friend.location %></td>
+	</tr>
+	<% end %>
+ 
 </table>
+
+<h6 class='white logo-margin'><em>Biker's Trip</em></h6>

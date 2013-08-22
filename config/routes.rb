@@ -14,10 +14,16 @@ Biker::Application.routes.draw do
   resources :routes
   resources :histories
   resources :main
-  resources :users
+  resources :users do
+    resources :photos
+  end
   resources :settings
-  resources :photos
-  resources :friends
+  
+  resources :friends do
+    collection do
+      get :requests
+    end
+  end
   resources :about
   resources :find
   resources :profile

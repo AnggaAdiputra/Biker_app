@@ -1,6 +1,23 @@
 
 	<%= render 'layouts/menubar' %>
 
+	<ul>
+		<% @histories.each do |history| %>
+		<li>
+
+			<% if history.route.image.present? %>
+				<%= image_tag history.route.image_url, style: 'width: 200px' %>
+				<% end %>
+
+				<%= link_to history.user.name, user_path(history.user.name) %>
+				Ride Trip <%= history.route.name %>
+				from <%= link_to history.route.start_location.name, location_path(history.route.start_location) %>
+				to <%= link_to history.route.end_location.name, location_path(history.route.end_location) %>
+				with distance <%= distance_to(history.route.start_location, history.route.end_location) %> KM
+		</li>
+		<% end %>
+	</ul>
+
 	<div class='span3 explore '>
 		<%= link_to 'Explore Route', new_route_path, class:"btn btn-large btn-block btn-primary" %>
 

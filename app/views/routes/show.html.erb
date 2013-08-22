@@ -1,8 +1,22 @@
-<h1> <%= @route.name %> </h1>
+<h1 class='white'> <%= @route.name %> </h1>
 
-<p>
+<p class='white'>
 	Start Location  : <%= @route.start_location.name %> <br>
 	End Location    : <%= @route.end_location.name %><br>
 </p>
 
 <%= link_to 'Edit', edit_route_path(@route) %>
+
+<% if @route.image.present? %>
+<p> <%= image_tag @route.image_url %></p>
+<% end %>
+
+
+
+<div class='row'>
+	<div class='span12'>
+		<div class='back-my-settings'>
+			<%= link_to '<< Back to News Feed', main_index_path, class:"btn btn-large btn" %>
+		</div>
+	</div>
+</div>

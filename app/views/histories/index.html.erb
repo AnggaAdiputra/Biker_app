@@ -8,6 +8,7 @@
 			Email   : <%= @user.email %> <br>
 			Gender  : <%= @user.gender %> <br>
 			Location: <%= @user.location %> <br> 
+			Member Since :<%= @user.created_at.strftime('%d %B %Y') %>
 		</p>
 	</div>
 
@@ -15,34 +16,31 @@
  <tr>
 	<td>First Check-in</td>
 	<td>Last Check-in</td>
-	<td>Total Check-in</td>
-	<td>Member Since</td>
+	<td>Distance</td>
+	<td>Checked in At</td>
  </tr>
- <tr>
-	<td>Jln. Swadaya 1, Bintaro Jaya</td>
-	<td>Bina Nusantara, Campus anggrek</td>
-	<td>20 Times</td>
-	<td>10 March 2010</td>
- </tr>
+ 
+	<% @user.histories.each do |history| %>
+
+	<tr>
+		<td>
+			<%=link_to history.route.start_location.name, location_path(history.route.start_location) %>
+		</td>
+		<td><%=link_to history.route.end_location.name, location_path(history.route.end_location) %>
+		</td>
+		<td><%= distance_to(history.route.start_location, history.route.end_location) %> KM
+		</td>
+		<td><%= history.created_at.strftime('%d %B %Y') %></td>
+	</tr>
+		<% end %>
+ 
 </table>
 
 
 
-	<ul>
-		<% @histories.each do |history| %> class='white'
-		<li>
-			<%= link_to histories.name, histories_path(histories) %>
-
-			<%= link_to 'Edit', edit_history_path(history) %> |
-			<%= link_to 'Delete', history_path(history), method: :Delete %>
-
-		</li>
-		<% end %>
-	</ul>
-
 			<div class='row '>
 			<div class='span12'>
-				<div class='back-my-settings'>
+				<div class='back-to-user'>
 				
 					<%= link_to '<< Back To User', user_path(current_user), class:"btn btn-large btn" %>
 			</div>

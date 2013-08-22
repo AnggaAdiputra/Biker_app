@@ -6,9 +6,16 @@
 <div class='white'>
   <div><%= f.label :name %><br />
   <%= f.text_field :name %></div>
-  
-	 <div ><%= f.label :email %><br />
+
+   <div ><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
+  
+<div ><%= f.label :gender %><br />
+  <%= select :user, :gender, [['laki-laki', 'Male'], ['wanita', 'Female']] %>
+
+  <div ><%= f.label :location %><br />
+  <%= f.text_field :location %></div>
+
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>

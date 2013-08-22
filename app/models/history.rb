@@ -1,6 +1,6 @@
 class History < ActiveRecord::Base
-  attr_accessible :location_id, :user_id, :image
-  belongs_to :location
+  attr_accessible :route_id, :user_id, :image, :user
+  belongs_to :route
   belongs_to :user
 
 end

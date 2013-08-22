@@ -3,11 +3,13 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
   validates :name, presence: true
   has_many :routes
+  has_many :histories
   has_and_belongs_to_many :locations
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :image, :location, :gender
+  attr_accessible :confirmation_token, :confirmed_at, :confirmation_sent_at, :unconfirmed_email
 
   validates_presence_of :password, on: :create
   validates_uniqueness_of :email
