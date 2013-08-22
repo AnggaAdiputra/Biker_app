@@ -8,7 +8,7 @@ development:
   database: Biker_dev
   host: localhost
   username: root
-  password: toor
+  password: tigertule
   pool: 5
   timeout: 5000
   socket: /var/run/mysqld/mysqld.sock
@@ -21,7 +21,7 @@ test:
   database: Biker_test
   host: localhost
   username: root
-  password: toor
+  password: tigertule
   pool: 5
   timeout: 5000
   socket: /var/run/mysqld/mysqld.sock
@@ -31,7 +31,7 @@ production:
   database: Biker_pro
   host: localhost
   username: root
-  password: toor
+  password: tigertule
   pool: 5
   timeout: 5000
   socket: /var/run/mysqld/mysqld.sock
