@@ -1,10 +1,10 @@
 
 	<%= render 'layouts/menubar' %>
-
+<div class='scroll white bold'>
 	<ul>
 		<% @histories.each do |history| %>
-		<li>
-
+		<li style='margin-top:50px;'>
+			
 			<% if history.route.image.present? %>
 				<%= image_tag history.route.image_url, style: 'width: 200px' %>
 				<% end %>
@@ -17,11 +17,11 @@
 		</li>
 		<% end %>
 	</ul>
-
+</div>
 	<div class='span3 explore '>
-		<%= link_to 'Explore Route', new_route_path, class:"btn btn-large btn-block btn-primary" %>
+		<%= link_to 'All Locations', locations_path, class:"btn btn-large btn-block btn-primary" %>
 
-		<h6 class='white explore-text'><strong>TAP ABOVE TO EXPLORE !</strong></h6>
+		<h6 class='white explore-text'>Tap Above to Show All !</h6>
 			
 	</div>
 <h6 class='white logo-margin'><em>Biker's Trip</em></h6>

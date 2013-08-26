@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
+<div class='white'>
+	<p>
+	  <b>Name:</b>
+	  <%= @category.name %>
+	</p>
 
-<ul>
-	<% @category.locations.each do |location| %>
-    <li><%= location.name %></li>
-  <% end %>
-</ul>
+	<ul>
+		<% @category.locations.each do |location| %>
+	    <li><%= location.name %></li>
+	  <% end %>
+	</ul>
+</div>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

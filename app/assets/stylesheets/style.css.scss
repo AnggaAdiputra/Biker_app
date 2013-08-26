@@ -26,7 +26,7 @@ h1.text-center{
 }
 
 .back-my-settings {
-	margin-top:300px; float: right; margin-right: 20px;
+	margin-top:100px; float: right; margin-right: 20px;
 }
 
 body {
@@ -55,5 +55,15 @@ body {
 }
 
 .back-to-user {
-	margin-top:220px; float: right; margin-right: 20px;
+	margin-top:100px; float: right; margin-right: 20px;
+}
+
+.scroll {
+	margin-top:50px;
+	height:200px;
+	overflow-y:scroll;
+}
+
+.bold {
+	font-weight: bold;
 }
