@@ -47,10 +47,6 @@ body {
 }
 
 .menubar-container {
-	overflow: hidden;
-	border:1px solid white;
-	border-radius:20px; 
-	background-color:Slategray;
 	padding:0px 20px;
 }
 
@@ -59,7 +55,7 @@ body {
 }
 
 .scroll {
-	margin-top:50px;
+	margin-top:-30px;
 	height:200px;
 	overflow-y:scroll;
 }
@@ -67,3 +63,19 @@ body {
 .bold {
 	font-weight: bold;
 }
+
+nav {
+	width: 960px;
+	height: 100px;
+	margin: -35px auto;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.gradient {
+  font-size: 40px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
