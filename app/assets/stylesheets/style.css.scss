@@ -79,3 +79,21 @@ nav {
   -webkit-text-fill-color: transparent;
 }
 
+.shadow-dodger {
+  -moz-box-shadow:    3px 3px 5px 6px #00B8E6;
+  -webkit-box-shadow: 3px 3px 5px 6px #00B8E6;
+  box-shadow:         3px 3px 5px 6px #00B8E6;
+}
+
+.sblue {
+  -moz-box-shadow:    3px 3px 5px 6px #0052CC;
+  -webkit-box-shadow: 3px 3px 5px 6px #0052CC;
+  box-shadow:         3px 3px 5px 6px #0052CC;
+}
+
+.swhite {
+  -moz-box-shadow:    3px 3px 5px 6px MintCream;
+  -webkit-box-shadow: 3px 3px 5px 6px MintCream;
+  box-shadow:         3px 3px 5px 6px MintCream;
+}
+
