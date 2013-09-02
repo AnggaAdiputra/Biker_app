@@ -1,23 +1,33 @@
 <div class='row-fluid'>
 	<div class='span-8'>
-		<h1 class='white gradient'> List All Location</h1>
+		<h1 class='white gradient', style='margin-bottom:50px;'> List All Location</h1>
 
+		<div class='scroll white bold'>
 			<ul>
 				<% @locations.each do |location| %>
 				<li>
 					<%= link_to location.name, location_path(location) %>
 
-					<%= link_to 'Edit', edit_location_path(location) %> |
-					<%= link_to 'Delete', location_path(location), method: :Delete %>
 
 				</li>
 				<% end %>
 			</ul>
+		</div>
 
 			<br/>
-			<%= link_to 'New_Location', new_location_path, class: 'btn btn-inverse' %>
+			<%= link_to 'Create Your Own Location Now!', new_location_path, class: 'btn btn-inverse' %>
 	</div>
 </div>
+
+
+<div class='row '>
+			<div class='span12'>
+				<div class='back-to-user'>
+				
+					<%= link_to '<< Back To User', user_path(current_user), class:"btn btn-large btn-success" %>
+			</div>
+		</div>
+	</div>
 
 
 

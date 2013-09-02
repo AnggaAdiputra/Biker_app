@@ -6,7 +6,7 @@
 		<li style='margin-top:50px;'>
 			
 			<% if history.route.image.present? %>
-				<%= image_tag history.route.image_url, style: 'width: 200px' %>
+				<%= image_tag history.route.image_url, style: 'width: 100px' %>
 				<% end %>
 
 				<%= link_to history.user.name, user_path(history.user.name) %>
@@ -19,7 +19,7 @@
 	</ul>
 </div>
 	<div class='span3 explore '>
-		<%= link_to 'All Locations', locations_path, class:"btn btn-large btn-block btn-primary sblue" %>
+		<%= link_to 'All Locations', locations_path, class:"btn btn-large btn-block btn-primary s-blue" %>
 
 		<h6 class='white explore-text'>Tap Above to Show All !</h6>
 			

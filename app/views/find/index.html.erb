@@ -1,5 +1,5 @@
 <h1 class='white'>Search Friend By Name or ID :</h1>
-<%= form_tag find_index_path, class: 'form-search form', method: :get do %>
+<%= form_tag find_index_path, class: 'form-search form', method: :get, id:'cari' do %>
 <%= text_field_tag :name, params[:name].to_s, class: 'input-medium search-query' %>
 <%= submit_tag 'Find Now!', class: 'btn btn-success' %>
 <% end %>
@@ -28,7 +28,7 @@
 
 
 		<div class='back-my-settings'>
-			<%= link_to '<< Back to My Settings', settings_path, class:"btn btn-large btn-success" %>
+			<%= link_to '<< Back to My Settings', settings_path, class:"btn btn-large btn-success s-green" %>
 		</div>
 	</div>
 </div>

@@ -1,7 +1,7 @@
 <h1 class='white'>History Info<h1>
 
 <div class='row-fluid'>
-	<div class='span12 top bold'>
+	<div class='span12 top bold', style='margin-bottom:20px;'>
 		<%= image_tag @user.image_url, class: 'img-polaroid imgset' %>
 		<p class='white font'>
 			Name    : <%= @user.name %> <br>
@@ -12,6 +12,7 @@
 		</p>
 	</div>
 
+	<div class='scroll white bold'>
 	<table class="table tableset scroll bold">
  <tr>
 	<td>First Check-in</td>
@@ -33,16 +34,18 @@
 		<td><%= history.created_at.strftime('%d %B %Y') %></td>
 	</tr>
 		<% end %>
- 
+		</div>
 </table>
+</div>
 
 
 
-			<div class='row '>
+
+			<div class='row'>
 			<div class='span12'>
 				<div class='back-to-user'>
 				
-					<%= link_to '<< Back To User', user_path(current_user), class:"btn btn-large btn-success" %>
+					<%= link_to '<< Back To User', user_path(current_user), class:"btn btn-large btn-success s-green" %>
 			</div>
 		</div>
 	</div>

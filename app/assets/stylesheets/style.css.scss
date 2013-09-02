@@ -51,7 +51,7 @@ body {
 }
 
 .back-to-user {
-	margin-top:100px; float: right; margin-right: 20px;
+	margin-top:50px; float: right; margin-right: 20px;
 }
 
 .scroll {
@@ -79,21 +79,27 @@ nav {
   -webkit-text-fill-color: transparent;
 }
 
-.shadow-dodger {
+.s-sky-blue {
   -moz-box-shadow:    3px 3px 5px 6px #00B8E6;
   -webkit-box-shadow: 3px 3px 5px 6px #00B8E6;
   box-shadow:         3px 3px 5px 6px #00B8E6;
 }
 
-.sblue {
+.s-blue {
   -moz-box-shadow:    3px 3px 5px 6px #0052CC;
   -webkit-box-shadow: 3px 3px 5px 6px #0052CC;
   box-shadow:         3px 3px 5px 6px #0052CC;
 }
 
-.swhite {
+.s-white {
   -moz-box-shadow:    3px 3px 5px 6px MintCream;
   -webkit-box-shadow: 3px 3px 5px 6px MintCream;
   box-shadow:         3px 3px 5px 6px MintCream;
+}
+
+.s-green {
+  -moz-box-shadow:    3px 3px 5px 6px #4DB84D;
+  -webkit-box-shadow: 3px 3px 5px 6px #4DB84D;
+  box-shadow:         3px 3px 5px 6px #4DB84D;
 }
 
