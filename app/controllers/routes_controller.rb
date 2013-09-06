@@ -30,9 +30,9 @@ before_filter :authenticate_user!
 
 	def update
 		@route = Route.find(params[:id])
-		if @route.update_attributes(params[:route])
-			redirect_to route_path(@route)
-		else
+		 if @route.update_attributes(params[:route])
+			  redirect_to route_path(@route)
+		 else
 			render :edit
 		end
 	end
@@ -42,6 +42,4 @@ before_filter :authenticate_user!
 	  @route.destroy
 	  redirect_to route_path
 	end
-
-
 end

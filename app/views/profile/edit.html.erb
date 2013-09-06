@@ -1,79 +1,79 @@
 <%= form_for @user, url: profile_path(@user), html: { multipart: true } do |f| %>
 
-<table class='white bold'>
-		<tr>
-			<td>
-			 Name
-			</td>
+	<table class='white bold'>
+			<tr>
+				<td>
+				 Name
+				</td>
 
-			<td>
-				:
-			</td>
+				<td>
+					:
+				</td>
 
-			<td>
-				<%= f.text_field :name %>
-			</td>
-		</tr>
+				<td>
+					<%= f.text_field :name %>
+				</td>
+			</tr>
 
-		<tr>
-			<td>
-				Email Address
-			</td>
+			<tr>
+				<td>
+					Email Address
+				</td>
 
-			<td>
-				:
-			</td>
+				<td>
+					:
+				</td>
 
-			<td>
-				<%= f.text_field :email %>
-			</td>
-		</tr>
+				<td>
+					<%= f.text_field :email %>
+				</td>
+			</tr>
 
-		<tr>
-			<td>
-				Location
-			</td>
+			<tr>
+				<td>
+					Location
+				</td>
 
-			<td>
-				:
-			</td>
+				<td>
+					:
+				</td>
 
-			<td>
-				<%= f.text_field :location %>
-			</td>
-		</tr>
+				<td>
+					<%= f.text_field :location %>
+				</td>
+			</tr>
 
-		<tr>
-			<td>
-				Gender
-			</td>
+			<tr>
+				<td>
+					Gender
+				</td>
 
-			<td>
-				:
-			</td>
+				<td>
+					:
+				</td>
 
-			<td>
-				<%= select :user, :gender, [['laki-laki', 'Male'], ['wanita', 'Female']] %>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				Avatar
-			</td>
+				<td>
+					<%= select :user, :gender, [['laki-laki', 'Male'], ['wanita', 'Female']] %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Avatar
+				</td>
 
-			<td>
-				:
-			</td>
+				<td>
+					:
+				</td>
 
-			<td>
-				<%= f.file_field :image %>
-			</td>
-		</tr>
-	</table>
+				<td>
+					<%= f.file_field :image %>
+				</td>
+			</tr>
+		</table>
 
 	<%= f.submit 'Update Profile', class: 'btn btn-primary' %>
 	<%= f.submit 'Cancel', class: 'btn btn-danger' %>
-	<%  end %>
+<%  end %>
 
 <h6 class='logosettings white'><em>Biker's Trip</em></h6>
 

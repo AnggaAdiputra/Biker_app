@@ -1,12 +1,10 @@
-
-
-	<%= render 'layouts/menubar' %>
+<%= render 'layouts/menubar' %>
 
 <ul class='thumbnails thumb scroll'>
 
 
-	<% @routes.each do |r| %>
-	 <% if r.image.present? %>
+<% @routes.each do |r| %>
+	<% if r.image.present? %>
 		<li class='span4'>
 			<%= link_to r.image_url, class: :thumbnail do %>
 				<%= image_tag r.image_url, class: :imagetag %>

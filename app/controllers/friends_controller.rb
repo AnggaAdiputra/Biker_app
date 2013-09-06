@@ -28,7 +28,6 @@ class FriendsController < ApplicationController
 	end
 
 	def requests
+
 	end
-
-
 end

@@ -23,30 +23,32 @@
  
 	<% @user.histories.each do |history| %>
 
-	<tr>
-		<td>
+		<tr>
+			<td>
 			<%=link_to history.route.start_location.name, location_path(history.route.start_location) %>
-		</td>
-		<td><%=link_to history.route.end_location.name, location_path(history.route.end_location) %>
-		</td>
-		<td><%= distance_to(history.route.start_location, history.route.end_location) %> KM
-		</td>
-		<td><%= history.created_at.strftime('%d %B %Y') %></td>
-	</tr>
-		<% end %>
+			</td>
+
+			<td><%=link_to history.route.end_location.name, location_path(history.route.end_location) %>
+			</td>
+
+			<td><%= distance_to(history.route.start_location, history.route.end_location) %> KM
+			</td>
+
+			<td><%= history.created_at.strftime('%d %B %Y') %></td>
+			</tr>
+			<% end %>
 		</div>
-</table>
+	</table>
 </div>
 
 
-
-
-			<div class='row'>
-			<div class='span12'>
-				<div class='back-to-user'>
+<div class='row'>
+	<div class='span12'>
+		<div class='back-to-user'>
 				
-					<%= link_to '<< Back To User', user_path(current_user), class:"btn btn-large btn-success s-green" %>
-			</div>
+		<%= link_to '<< Back To User', user_path(current_user), class:"btn btn-large btn-success s-green" %>
+
 		</div>
 	</div>
+</div>
 

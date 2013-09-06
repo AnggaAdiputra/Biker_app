@@ -3,21 +3,21 @@
 <%= render 'layouts/menubar' %>
 
 <h2 class='title gradient'>Friend List</h2>
+
 <table class="table white menubar bold">
 
-<tr>
-	<td>Username</td>
-	<td>Location</td>
-</tr>
-
+	<tr>
+		<td>Username</td>
+		<td>Location</td>
+	</tr>
 
 	<% @friends.each do |friend| %>
-	<tr>
-		<td><%= link_to friend.name, user_path(friend) %></td>
-		<td><%= friend.location %></td>
-	</tr>
-	<% end %>
- 
+
+		<tr>
+			<td><%= link_to friend.name, user_path(friend) %></td>
+			<td><%= friend.location %></td>
+		</tr>
+	<% end %> 
 </table>
 
 <h6 class='white logo-margin'><em>Biker's Trip</em></h6>

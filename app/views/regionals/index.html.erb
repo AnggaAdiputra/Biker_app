@@ -8,16 +8,16 @@
     <th></th>
   </tr>
 
-<% @regionals.each do |regional| %>
-  <tr>
-    <td><%= regional.name %></td>
-    <td><%= link_to 'Show', regional %></td>
-    <td><%= link_to 'Edit', edit_regional_path(regional) %></td>
-    <td><%= link_to 'Destroy', regional, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+    <% @regionals.each do |regional| %>
+    <tr>
+      <td><%= regional.name %></td>
+      <td><%= link_to 'Show', regional %></td>
+      <td><%= link_to 'Edit', edit_regional_path(regional) %></td>
+      <td><%= link_to 'Destroy', regional, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'New Regional', new_regional_path %>
